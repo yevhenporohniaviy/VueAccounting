@@ -1,0 +1,25 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "## Project setup",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-s tab:run:back tab:run:front open:page",
+    "packages:npm": "run-s tab:conf:back tab:conf:front",
+    "conf:back": "cd testproject-backend && npm i",
+    "conf:front": "cd testproject-front && npm i",
+    "tab:conf:back": "ttab -t 'install npm back' npm run conf:back",
+    "tab:conf:front": "ttab -t 'install npm front' npm run conf:front",
+    "run:back": "cd testproject-backend && node server.js",
+    "run:front": "cd testproject-front && npm run serve",
+    "tab:run:back": "ttab -t 'Run back' npm run run:back",
+    "tab:run:front": "ttab -t 'Run front' npm run run:front",
+    "open:page": "open 'http://localhost:8081'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "ttab": "^0.7.0"
+  }
+}
