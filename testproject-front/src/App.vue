@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import UsersTable from "@/components/UsersTable";
+import UsersTable from "../src/components/UsersTable";
 
 export default {
   name: 'App',
