@@ -8,3 +8,8 @@ describe('UsersTable', () => {
   })
 })
 
+describe('Mounted UsersTable', () => {
+  const wrapper = mount(UsersTable);
+  console.log(wrapper)
+
+})
